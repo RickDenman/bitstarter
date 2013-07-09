@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+console.log("Starting grader.js");
+
 /*
 Automatically grade files for the presence of specified HTML tags/attributes.
 Uses commander.js and cheerio. Teaches command line application development
@@ -20,6 +23,8 @@ References:
    - https://developer.mozilla.org/en-US/docs/JSON
    - https://developer.mozilla.org/en-US/docs/JSON#JSON_in_Firefox_2
 */
+
+console.log("At top of grader.js");
 
 var fs = require('fs');
 var program = require('commander');
@@ -60,6 +65,7 @@ var clone = function(fn) {
     // http://stackoverflow.com/a/6772648
     return fn.bind({});
 };
+
 
 if(require.main == module) {
     program
